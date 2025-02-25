@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Sum Visualizer | Elizabeth Diaz Familia</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Añadir fuente Inter de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://img.icons8.com/fluency/48/null/code.png">
+    <!-- Meta tags para SEO y compartir en redes sociales -->
+    <meta name="description" content="Visualizador interactivo del algoritmo Two Sum con explicación paso a paso">
+    <meta name="keywords" content="two sum, algoritmo, visualizador, javascript, leetcode">
+    <meta name="author" content="Elizabeth Diaz Familia">
+    <meta property="og:title" content="Two Sum Visualizer">
+    <meta property="og:description" content="Visualizador interactivo del algoritmo Two Sum con explicación paso a paso">
+    <meta property="og:type" content="website">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Two Sum Visualizer</h1>
+            <p class="subtitle">Visualiza el algoritmo de Two Sum en acción</p>
+        </header>
+        
+        <div class="app-card">
+            <div class="app-section">
+                <h2 class="section-title">Datos de entrada</h2>
+                
+                <div class="input-group">
+                    <label for="array-input">Array de números (separados por comas):</label>
+                    <input type="text" id="array-input" placeholder="Ejemplo: 2,7,11,15" value="2,7,11,15">
+                </div>
+                
+                <div class="input-group">
+                    <label for="target-input">Valor objetivo (target):</label>
+                    <input type="number" id="target-input" placeholder="Ejemplo: 9" value="9">
+                </div>
+                
+                <button id="calculate-btn">Encontrar solución</button>
+                
+                <div class="examples">
+                    <span style="font-weight: 600; margin-right: 10px;">Ejemplos:</span>
+                    <button class="example-btn" data-array="2,7,11,15" data-target="9">Ejemplo 1</button>
+                    <button class="example-btn" data-array="3,2,4" data-target="6">Ejemplo 2</button>
+                    <button class="example-btn" data-array="3,3" data-target="6">Ejemplo 3</button>
+                    <button class="example-btn" data-array="1,5,9,2,3,7,11,15" data-target="18">Ejemplo 4</button>
+                </div>
+            </div>
+            
+            <div class="app-section result-section">
+                <h2 class="section-title">Visualización</h2>
+                
+                <div class="result-message" id="result-message">
+                    Presiona "Encontrar solución" para iniciar la visualización
+                </div>
+                
+                <div class="array-display" id="array-display"></div>
+                
+                <div class="animation-control">
+                    <button class="control-btn" id="reset-btn">Reiniciar</button>
+                    <button class="control-btn primary" id="next-btn" disabled>Siguiente paso</button>
+                    <button class="control-btn" id="auto-btn">Auto</button>
+                </div>
+            </div>
+            
+            <div class="app-section">
+                <h2 class="section-title">Pasos de ejecución</h2>
+                
+                <ul class="steps" id="steps">
+                    <li>La visualización mostrará los pasos del algoritmo aquí.</li>
+                </ul>
+                
+                <div class="complexity">
+                    <div class="complexity-card">
+                        <div class="complexity-title">Complejidad Temporal</div>
+                        <div class="complexity-value">O(n)</div>
+                    </div>
+                    <div class="complexity-card">
+                        <div class="complexity-title">Complejidad Espacial</div>
+                        <div class="complexity-value">O(n)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-card">
+            <h2 class="footer-title" id="footer-name">
+                Elizabeth Diaz Familia
+            </h2>
+            <div class="social-links">
+                <a href="https://github.com/Lizzy0981" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+                <a href="https://linkedin.com/in/eli-familia" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-icon"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </a>
+                <a href="https://twitter.com/Lizzyfamilia" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-icon"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+                </a>
+            </div>
+            <p class="copyright">
+                © <span id="current-year">2025</span> | Made with 💜
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
