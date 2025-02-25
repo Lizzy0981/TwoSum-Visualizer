@@ -4,7 +4,8 @@ Un visualizador interactivo y moderno para el algoritmo "Two Sum", que permite e
 
 ## 📱 Imágenes de la Aplicación 📱
 
-![Two Sum Visualizer](https://img.icons8.com/fluency/96/null/code.png)
+![Two Sum Visualizer]![Captura de pantalla_24-2-2025_232056_](https://github.com/user-attachments/assets/7aabd456-e38a-4e74-a674-23ff1d70a6ea)
+
 
 ## ✨ Características
 
